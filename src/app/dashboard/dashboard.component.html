@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <h2>Total number of employees</h2>
+                <div class="add">
+                    <h3>{{no_of_employees}}</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <h2>Add new employees</h2>
+                <div class="add">
+
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                        <a routerLink="/employee-sign-up" color="white">
+                            <mat-icon>add_circle_outline</mat-icon>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <app-employees-data-table></app-employees-data-table>
+</div>

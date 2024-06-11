@@ -1,0 +1,43 @@
+
+table {
+  width: 100%;
+}
+
+.edits {
+  display: flex;
+  justify-content: space-around;
+}
+
+th, h1 {
+  text-align: center;
+  padding: 19px;
+  font-size: large; 
+}
+ td {
+  text-align: center;
+ }
+ form {
+  font-size: 16px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.card {
+  transition: transform 0.5s ease-in-out;
+}
+
+.form-group {
+  animation: slide-in 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}

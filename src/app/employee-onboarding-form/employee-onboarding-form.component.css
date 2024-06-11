@@ -1,0 +1,53 @@
+form {
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+input:focus {
+    border-color: #0077c9;
+    box-shadow: 0 0 10px #0077c9;
+}
+
+input.invalid {
+    border-color: #ff0000;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+.nav-btns{
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+}
+
+button {
+    
+    padding: 10px 20px;
+}
+
+.card {
+    transition: transform 0.5s ease-in-out;
+}
+
+.form-group {
+    animation: slide-in 0.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}

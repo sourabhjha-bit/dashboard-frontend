@@ -1,0 +1,36 @@
+<div class="card">
+    <h1>Customer Registation</h1>
+    <form>
+        <div class="form-group" *ngIf="currentStep === 1">
+            <label>Name</label>
+            <input type="text" (blur)="validateName()" [class.invalid]="errors.name" [(ngModel)]="employee_name"
+                [ngModelOptions]="{standalone: true}" class="form-control" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group" *ngIf="currentStep === 1">
+            <label>Email address</label>
+            <input type="text" (blur)="validateName()" [class.invalid]="errors.name" [(ngModel)]="employee_email"
+                [ngModelOptions]="{standalone: true}" class="form-control" id="address" placeholder="Enter address">
+
+        </div>
+        <div class="form-group" *ngIf="currentStep === 2">
+            <label>Mobile</label>
+            <input type="text" (blur)="validateName()" [class.invalid]="errors.name" [(ngModel)]="employee_mobile"
+                [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" placeholder="Enter Mobile">
+
+        </div>
+        
+
+        <div class="nav-btns">
+
+            <button mat-stroked-button color="accent" [disabled]="!isValid" (click)="previousStep()"
+                *ngIf="currentStep > 1">Previous</button>
+
+            <button mat-stroked-button color="primary" [disabled]="!isValid" (click)="nextStep()"
+                *ngIf="currentStep < 2">Next</button>
+
+
+            <button mat-flat-button color="primary" (click)="save()" *ngIf="currentStep === 2">Finish</button>
+        </div>
+
+    </form>
+</div>
